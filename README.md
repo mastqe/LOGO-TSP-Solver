@@ -31,3 +31,4 @@ If you find this code useful, please cite:
 
 [IPDPS'13 Paper](http://olab.is.s.u-tokyo.ac.jp/~kamil.rocki/rocki_pco13.pdf)
 
+03-13-2017 - removed TSPLIB and cleaned history to reduce repo size
