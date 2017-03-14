@@ -8,7 +8,7 @@ CXX_PATH = g++
 INTEL_COMPILER_PATH = icpc
 
 #set 0 or 1
-HAVE_CUDA = 0
+HAVE_CUDA = 1
 HAVE_OPENCL = 0
 HAVE_PTHREADS = 1
 
@@ -45,9 +45,9 @@ HOST := $(shell hostname | awk -F. '{print $$1}')
 
 ifeq ($(OS),Linux)
 #LINUX
-CUDA_LIBRARY_DIR = /usr/local/cuda-5.0/lib64
-CUDA_INCLUDE_DIR = /usr/local/cuda-5.0/include
-NVCC_PATH = /usr/local/cuda-5.0/bin/nvcc
+CUDA_LIBRARY_DIR = /usr/lib/nvidia-cuda-toolkit/lib
+CUDA_INCLUDE_DIR = /usr/lib/nvidia-cuda-toolkit/include
+NVCC_PATH = /usr/bin/nvcc
 OPENCL_LIBRARY_DIR =  /opt/intel/opencl/lib64
 OPENCL_INCLUDE_DIR =  /opt/intel/opencl/include/
 #OPENCL_LIBRARY_DIR = /usr/local/cuda/lib/
