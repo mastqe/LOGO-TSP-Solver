@@ -203,108 +203,339 @@ parseInput(int argc, const char **argv)
 	args.error = 0.0f;
     }
     // some known solutions to compare with during the computation
-    if (!strcmp(args.filename, "./TSPLIB/berlin52.tsp")) {
-	args.solution = 7542;
+    if (!strcmp(args.filename, "../tsplib/a280.tsp")) {
+        args.solution = 2579;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/ch130.tsp")) {
-	args.solution = 6110;
+    } else if (!strcmp(args.filename, "../tsplib/ali535.tsp")) {
+        args.solution = 202339;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pr439.tsp")) {
-	args.solution = 107217;
+    } else if (!strcmp(args.filename, "../tsplib/att48.tsp")) {
+        args.solution = 10628;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/kroA100.tsp")) {
-	args.solution = 21282;
+    } else if (!strcmp(args.filename, "../tsplib/att532.tsp")) {
+        args.solution = 27686;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/kroE100.tsp")) {
-	args.solution = 22068;
+    } else if (!strcmp(args.filename, "../tsplib/bayg29.tsp")) {
+        args.solution = 1610;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/kroB100.tsp")) {
-	args.solution = 22141;
+    } else if (!strcmp(args.filename, "../tsplib/bays29.tsp")) {
+        args.solution = 2020;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/kroC100.tsp")) {
-	args.solution = 20749;
+    } else if (!strcmp(args.filename, "../tsplib/berlin52.tsp")) {
+        args.solution = 7542;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/kroD100.tsp")) {
-	args.solution = 21294;
+    } else if (!strcmp(args.filename, "../tsplib/bier127.tsp")) {
+        args.solution = 118282;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/kroA150.tsp")) {
-	args.solution = 26524;
+    } else if (!strcmp(args.filename, "../tsplib/brazil58.tsp")) {
+        args.solution = 25395;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/kroA200.tsp")) {
-	args.solution = 29368;
+    } else if (!strcmp(args.filename, "../tsplib/brd14051.tsp")) {
+        args.solution = 469385;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/ch150.tsp")) {
-	args.solution = 6528;
+    } else if (!strcmp(args.filename, "../tsplib/brg180.tsp")) {
+        args.solution = 1950;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/rat195.tsp")) {
-	args.solution = 2323;
+    } else if (!strcmp(args.filename, "../tsplib/burma14.tsp")) {
+        args.solution = 3323;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/ts225.tsp")) {
-	args.solution = 126643;
+    } else if (!strcmp(args.filename, "../tsplib/ch130.tsp")) {
+        args.solution = 6110;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pr226.tsp")) {
-	args.solution = 80369;
+    } else if (!strcmp(args.filename, "../tsplib/ch150.tsp")) {
+        args.solution = 6528;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pr264.tsp")) {
-	args.solution = 49135;
+    } else if (!strcmp(args.filename, "../tsplib/d1291.tsp")) {
+        args.solution = 50801;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pr299.tsp")) {
-	args.solution = 48191;
+    } else if (!strcmp(args.filename, "../tsplib/d15112.tsp")) {
+        args.solution = 1573084;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/a280.tsp")) {
-	args.solution = 2579;
+    } else if (!strcmp(args.filename, "../tsplib/d1655.tsp")) {
+        args.solution = 62128;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/att532.tsp")) {
-	args.solution = 27686;
+    } else if (!strcmp(args.filename, "../tsplib/d18512.tsp")) {
+        args.solution = 645238;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/rat783.tsp")) {
-	args.solution = 8806;
+    } else if (!strcmp(args.filename, "../tsplib/d198.tsp")) {
+        args.solution = 15780;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pr1002.tsp")) {
-	args.solution = 259045;
+    } else if (!strcmp(args.filename, "../tsplib/d2103.tsp")) {
+        args.solution = 80450;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/vm1084.tsp")) {
-	args.solution = 239297;
+    } else if (!strcmp(args.filename, "../tsplib/d493.tsp")) {
+        args.solution = 35002;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pr2392.tsp")) {
-	args.solution = 378032;
+    } else if (!strcmp(args.filename, "../tsplib/d657.tsp")) {
+        args.solution = 48912;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/fl3795.tsp")) {
-	args.solution = 28772;
+    } else if (!strcmp(args.filename, "../tsplib/dantzig42.tsp")) {
+        args.solution = 699;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pcb3038.tsp")) {
-	args.solution = 137694;
+    } else if (!strcmp(args.filename, "../tsplib/dsj1000.tsp")) {
+        args.solution = 18659688;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/fnl4461.tsp")) {
-	args.solution = 182566;
+    } else if (!strcmp(args.filename, "../tsplib/eil101.tsp")) {
+        args.solution = 629;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/rl5934.tsp")) {
-	args.solution = 556045;
+    } else if (!strcmp(args.filename, "../tsplib/eil51.tsp")) {
+        args.solution = 426;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pla7397.tsp")) {
-	args.solution = 23260728;
+    } else if (!strcmp(args.filename, "../tsplib/eil76.tsp")) {
+        args.solution = 538;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/usa13509.tsp")) {
-	args.solution = 19982859;
+    } else if (!strcmp(args.filename, "../tsplib/fl1400.tsp")) {
+        args.solution = 20127;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/d15112.tsp")) {
-	args.solution = 1573084;
+    } else if (!strcmp(args.filename, "../tsplib/fl1577.tsp")) {
+        args.solution = 22249;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/d18512.tsp")) {
-	args.solution = 645238;
+    } else if (!strcmp(args.filename, "../tsplib/fl3795.tsp")) {
+        args.solution = 28772;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/sw24978.tsp")) {
-	args.solution = 855597;
+    } else if (!strcmp(args.filename, "../tsplib/fl417.tsp")) {
+        args.solution = 11861;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pla33810.tsp")) {
-	args.solution = 66048945;
+    } else if (!strcmp(args.filename, "../tsplib/fnl4461.tsp")) {
+        args.solution = 182566;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/pla85900.tsp")) {
-	args.solution = 142382641;
+    } else if (!strcmp(args.filename, "../tsplib/fri26.tsp")) {
+        args.solution = 937;
 
-    } else if (!strcmp(args.filename, "./TSPLIB/mona-lisa100K.tsp")) {
-	args.solution = 5757080;
+    } else if (!strcmp(args.filename, "../tsplib/gil262.tsp")) {
+        args.solution = 2378;
 
+    } else if (!strcmp(args.filename, "../tsplib/gr120.tsp")) {
+        args.solution = 6942;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr137.tsp")) {
+        args.solution = 69853;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr17.tsp")) {
+        args.solution = 2085;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr202.tsp")) {
+        args.solution = 40160;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr21.tsp")) {
+        args.solution = 2707;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr229.tsp")) {
+        args.solution = 134602;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr24.tsp")) {
+        args.solution = 1272;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr431.tsp")) {
+        args.solution = 171414;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr48.tsp")) {
+        args.solution = 5046;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr666.tsp")) {
+        args.solution = 294358;
+
+    } else if (!strcmp(args.filename, "../tsplib/gr96.tsp")) {
+        args.solution = 55209;
+
+    } else if (!strcmp(args.filename, "../tsplib/hk48.tsp")) {
+        args.solution = 11461;
+
+    } else if (!strcmp(args.filename, "../tsplib/kroA100.tsp")) {
+        args.solution = 21282;
+
+    } else if (!strcmp(args.filename, "../tsplib/kroA150.tsp")) {
+        args.solution = 26524;
+
+    } else if (!strcmp(args.filename, "../tsplib/kroA200.tsp")) {
+        args.solution = 29368;
+
+    } else if (!strcmp(args.filename, "../tsplib/kroB100.tsp")) {
+        args.solution = 22141;
+
+    } else if (!strcmp(args.filename, "../tsplib/kroB150.tsp")) {
+        args.solution = 26130;
+
+    } else if (!strcmp(args.filename, "../tsplib/kroB200.tsp")) {
+        args.solution = 29437;
+
+    } else if (!strcmp(args.filename, "../tsplib/kroC100.tsp")) {
+        args.solution = 20749;
+
+    } else if (!strcmp(args.filename, "../tsplib/kroD100.tsp")) {
+        args.solution = 21294;
+
+    } else if (!strcmp(args.filename, "../tsplib/kroE100.tsp")) {
+        args.solution = 22068;
+
+    } else if (!strcmp(args.filename, "../tsplib/lin105.tsp")) {
+        args.solution = 14379;
+
+    } else if (!strcmp(args.filename, "../tsplib/lin318.tsp")) {
+        args.solution = 42029;
+
+    } else if (!strcmp(args.filename, "../tsplib/linhp318.tsp")) {
+        args.solution = 41345;
+
+    } else if (!strcmp(args.filename, "../tsplib/nrw1379.tsp")) {
+        args.solution = 56638;
+
+    } else if (!strcmp(args.filename, "../tsplib/p654.tsp")) {
+        args.solution = 34643;
+
+    } else if (!strcmp(args.filename, "../tsplib/pa561.tsp")) {
+        args.solution = 2763;
+
+    } else if (!strcmp(args.filename, "../tsplib/pcb1173.tsp")) {
+        args.solution = 56892;
+
+    } else if (!strcmp(args.filename, "../tsplib/pcb3038.tsp")) {
+        args.solution = 137694;
+
+    } else if (!strcmp(args.filename, "../tsplib/pcb442.tsp")) {
+        args.solution = 50778;
+
+    } else if (!strcmp(args.filename, "../tsplib/pla33810.tsp")) {
+        args.solution = 66048945;
+
+    } else if (!strcmp(args.filename, "../tsplib/pla7397.tsp")) {
+        args.solution = 23260728;
+
+    } else if (!strcmp(args.filename, "../tsplib/pla85900.tsp")) {
+        args.solution = 142382641;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr1002.tsp")) {
+        args.solution = 259045;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr107.tsp")) {
+        args.solution = 44303;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr124.tsp")) {
+        args.solution = 59030;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr136.tsp")) {
+        args.solution = 96772;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr144.tsp")) {
+        args.solution = 58537;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr152.tsp")) {
+        args.solution = 73682;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr226.tsp")) {
+        args.solution = 80369;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr2392.tsp")) {
+        args.solution = 378032;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr264.tsp")) {
+        args.solution = 49135;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr299.tsp")) {
+        args.solution = 48191;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr439.tsp")) {
+        args.solution = 107217;
+
+    } else if (!strcmp(args.filename, "../tsplib/pr76.tsp")) {
+        args.solution = 108159;
+
+    } else if (!strcmp(args.filename, "../tsplib/rat195.tsp")) {
+        args.solution = 2323;
+
+    } else if (!strcmp(args.filename, "../tsplib/rat575.tsp")) {
+        args.solution = 6773;
+
+    } else if (!strcmp(args.filename, "../tsplib/rat783.tsp")) {
+        args.solution = 8806;
+
+    } else if (!strcmp(args.filename, "../tsplib/rat99.tsp")) {
+        args.solution = 1211;
+
+    } else if (!strcmp(args.filename, "../tsplib/rd100.tsp")) {
+        args.solution = 7910;
+
+    } else if (!strcmp(args.filename, "../tsplib/rd400.tsp")) {
+        args.solution = 15281;
+
+    } else if (!strcmp(args.filename, "../tsplib/rl11849.tsp")) {
+        args.solution = 923288;
+
+    } else if (!strcmp(args.filename, "../tsplib/rl1304.tsp")) {
+        args.solution = 252948;
+
+    } else if (!strcmp(args.filename, "../tsplib/rl1323.tsp")) {
+        args.solution = 270199;
+
+    } else if (!strcmp(args.filename, "../tsplib/rl1889.tsp")) {
+        args.solution = 316536;
+
+    } else if (!strcmp(args.filename, "../tsplib/rl5915.tsp")) {
+        args.solution = 565530;
+
+    } else if (!strcmp(args.filename, "../tsplib/rl5934.tsp")) {
+        args.solution = 556045;
+
+    } else if (!strcmp(args.filename, "../tsplib/si1032.tsp")) {
+        args.solution = 92650;
+
+    } else if (!strcmp(args.filename, "../tsplib/si175.tsp")) {
+        args.solution = 21407;
+
+    } else if (!strcmp(args.filename, "../tsplib/si535.tsp")) {
+        args.solution = 48450;
+
+    } else if (!strcmp(args.filename, "../tsplib/st70.tsp")) {
+        args.solution = 675;
+
+    } else if (!strcmp(args.filename, "../tsplib/swiss42.tsp")) {
+        args.solution = 1273;
+
+    } else if (!strcmp(args.filename, "../tsplib/ts225.tsp")) {
+        args.solution = 126643;
+
+    } else if (!strcmp(args.filename, "../tsplib/tsp225.tsp")) {
+        args.solution = 3916;
+
+    } else if (!strcmp(args.filename, "../tsplib/u1060.tsp")) {
+        args.solution = 224094;
+
+    } else if (!strcmp(args.filename, "../tsplib/u1432.tsp")) {
+        args.solution = 152970;
+
+    } else if (!strcmp(args.filename, "../tsplib/u159.tsp")) {
+        args.solution = 42080;
+
+    } else if (!strcmp(args.filename, "../tsplib/u1817.tsp")) {
+        args.solution = 57201;
+
+    } else if (!strcmp(args.filename, "../tsplib/u2152.tsp")) {
+        args.solution = 64253;
+
+    } else if (!strcmp(args.filename, "../tsplib/u2319.tsp")) {
+        args.solution = 234256;
+
+    } else if (!strcmp(args.filename, "../tsplib/u574.tsp")) {
+        args.solution = 36905;
+
+    } else if (!strcmp(args.filename, "../tsplib/u724.tsp")) {
+        args.solution = 41910;
+
+    } else if (!strcmp(args.filename, "../tsplib/ulysses16.tsp")) {
+        args.solution = 6859;
+
+    } else if (!strcmp(args.filename, "../tsplib/ulysses22.tsp")) {
+        args.solution = 7013;
+
+    } else if (!strcmp(args.filename, "../tsplib/usa13509.tsp")) {
+        args.solution = 19982859;
+
+    } else if (!strcmp(args.filename, "../tsplib/vm1084.tsp")) {
+        args.solution = 239297;
+
+    } else if (!strcmp(args.filename, "../tsplib/vm1748.tsp")) {
+        args.solution = 336556;
+    
     } else {
 	args.solution = INT_MAX;
     }
