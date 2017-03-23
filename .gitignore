@@ -2,3 +2,4 @@ out/*.o
 logo
 out.txt
 results/
+data.csv
