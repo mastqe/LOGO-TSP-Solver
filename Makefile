@@ -11,6 +11,7 @@ INTEL_COMPILER_PATH = icpc
 HAVE_CUDA = 1
 HAVE_OPENCL = 0
 HAVE_PTHREADS = 1
+WANT_GPROF = 0
 
 USE_INTEL_COMPILER = 0
 
@@ -84,6 +85,10 @@ CUDA_ARCHS = -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=s
 CUDA_OPTS = -fmad=true -prec-div=false -ftz=true -prec-sqrt=false --use_fast_math
 
 NVCCFLAGS = -O3 $(CUDA_CACHING)
+
+ifeq ($(WANT_GPROF), 1)
+    CFLAGS := $(CFLAGS) -pg
+endif
 
 ifeq ($(CUDA_LIMIT_REGISTER_NO), 1)
 	CUDA_OPTS := $(CUDA_OPTS) --maxrregcount=32
