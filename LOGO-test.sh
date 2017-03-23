@@ -1,22 +1,29 @@
 #!/bin/bash
-#cd LOGO-solver
 
-if [ ! -d "results" ]; then
-	mkdir results	
+if [ -e "out.txt" ]; then
+    rm out.txt
 fi
 
-./logo --in=../tsplib/berlin52.tsp --mode=cpu --err=0.005f --showLOInfo=1 --autoDevice |tee results/52_cpu
-./logo --in=../tsplib/berlin52.tsp --mode=cpumt --err=0.005f --showLOInfo=1 --autoDevice |tee results/52_cpumt
-./logo --in=../tsplib/berlin52.tsp --mode=cuda --err=0.005f --showLOInfo=1 --autoDevice |tee results/52_cuda
+if [ ! -d "results" ]; then
+    mkdir results   
+fi
 
-./logo --in=../tsplib/kroA100.tsp --mode=cpu --err=0.005f --showLOInfo=1 --autoDevice |tee results/100_cpu
-./logo --in=../tsplib/kroA100.tsp --mode=cpumt --err=0.005f --showLOInfo=1 --autoDevice |tee results/100_cpumt
-./logo --in=../tsplib/kroA100.tsp --mode=cuda --err=0.005f --showLOInfo=1 --autoDevice |tee results/100_cuda
+# iterate over files lists in "tsps"
+for file in $(cat tsps); do
+    printf "file: $file\n"
 
-./logo --in=../tsplib/gr202.tsp --mode=cpu --err=0.005f --showLOInfo=1 --autoDevice |tee results/202_cpu
-./logo --in=../tsplib/gr202.tsp --mode=cpumt --err=0.005f --showLOInfo=1 --autoDevice |tee results/202_cpumt
-./logo --in=../tsplib/gr202.tsp --mode=cuda --err=0.005f --showLOInfo=1 --autoDevice |tee results/202_cuda
+    # iterate over desired core counts
+    for i in 1 2 4 8 16 32 64; do
+        printf "cores: $i\n"
 
-./logo --in=../tsplib/pcb442.tsp --mode=cpu --err=0.01f --showLOInfo=1 --autoDevice |tee results/442_cpu
-./logo --in=../tsplib/pcb442.tsp --mode=cpumt --err=0.01f --showLOInfo=1 --autoDevice |tee results/442_cpumt
-./logo --in=../tsplib/pcb442.tsp --mode=cuda --err=0.01f --showLOInfo=1 --autoDevice |tee results/442_cuda
+        ./logo --in=../tsplib/$file --mode=cpupar --err=0.05f      \
+               --showLOInfo=1       --autoDevice  --maxCoresCPU=$i \
+               > ./results/${file%.tsp}_${i}_cpu
+    done
+
+    # execute on GPU
+    printf "GPU\n"
+    ./logo --in=../tsplib/$file --mode=cuda --err=0.05f \
+           --showLOInfo=1       --autoDevice            \
+           > ./results/${file%.tsp}_gpu
+done
