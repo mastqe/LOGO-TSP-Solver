@@ -27,9 +27,19 @@ function acc
                   cut -d" " -f5)
 }
 
-for f in results/*; do
-    printf "%s,"  ${f:8}
-    printf "%s,"  $(length $f)
-    printf "%s,"  $(acc $f) | sed "s/%//"
-    printf "%s\n" $(path_time $f)
+printf "1,2,4,8,16,32,64,gpu,\n" > data.csv
+
+let count=0
+for f in $(ls results/* | sort -V); do
+    printf "%s," $(path_time $f) >> data.csv
+    let count=$count+1
+
+    if [ $((count%8)) -eq 0 ]; then
+        printf "\n" >> data.csv
+    fi
 done
+
+
+# reserved data
+# printf "%s,"  $(length $f)
+# printf "%s,"  $(acc $f) | sed "s/%//"
