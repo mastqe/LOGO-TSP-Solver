@@ -27,15 +27,17 @@ function acc
                   cut -d" " -f5)
 }
 
-printf "1,2,4,8,16,32,64,gpu,\n" > data.csv
+out=${1:-data.csv}
+
+printf "1,2,4,8,16,32,64,gpu,\n" > $out
 
 let count=0
 for f in $(ls results/* | sort -V); do
-    printf "%s," $(path_time $f) >> data.csv
+    printf "%s," $(path_time $f) >> $out
     let count=$count+1
 
     if [ $((count%8)) -eq 0 ]; then
-        printf "\n" >> data.csv
+        printf "\n" >> $out
     fi
 done
 

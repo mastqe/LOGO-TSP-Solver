@@ -1,4 +1,13 @@
-###LOGO : LOcal Gpu Optimization TSP solver, version 0.62
+### Files
+* `tsps` - specific problem sets from TSPLIB to run with test script
+  * Use filename without .tsp extension
+  * Assumed to be in `../tsplib/`
+* `LOGO-test.sh` - run scaling tests
+  * Pass a number if more than one trial is desired
+* `results.sh` - aggregate results into csv
+  * Pass a file name
+
+# LOGO : LOcal Gpu Optimization TSP solver, version 0.62
 
 If you find this code useful, please cite:
 
@@ -30,5 +39,3 @@ If you find this code useful, please cite:
 [HPCS'12 Paper](http://olab.is.s.u-tokyo.ac.jp/~kamil.rocki/rocki_hpcs2012.pdf)
 
 [IPDPS'13 Paper](http://olab.is.s.u-tokyo.ac.jp/~kamil.rocki/rocki_pco13.pdf)
-
-03-13-2017 - removed TSPLIB and cleaned history to reduce repo size

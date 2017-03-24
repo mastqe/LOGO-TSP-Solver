@@ -1,16 +1,11 @@
 #!/bin/bash
-
-if [ -e "out.txt" ]; then
-    rm out.txt
-fi
-
-if [ ! -d "results" ]; then
-    mkdir results
-fi
-
 arg=${1:-1}
 
-for x in $(seq 1 $arg); do
+for x in $(seq 1 $arg) ; do
+
+    if [ -e "out.txt" ]; then rm out.txt; fi
+    if [ ! -d "results" ]; then mkdir results; fi
+
     # iterate over files lists in "tsps"
     for file in $(cat tsps); do
         printf "file: $file\n"
@@ -34,8 +29,8 @@ for x in $(seq 1 $arg); do
     done
 
     printf "\n ----- Saving $x -----\n\n"
-    ./results.sh
-    mv data.csv ${x}.csv
-    rm -r results
-    mkdir results
+    ./results.sh ${x}.csv
+    if [ $x -lt $arg ]; then
+        rm -r ./results/
+    fi
 done
