@@ -273,7 +273,7 @@ parseInput(int argc, const char **argv)
         args.solution = 699;
 
     } else if (!strcmp(args.filename, "../tsplib/dsj1000.tsp")) {
-        args.solution = 18659688;
+        args.solution = 18660188;
 
     } else if (!strcmp(args.filename, "../tsplib/eil101.tsp")) {
         args.solution = 629;
